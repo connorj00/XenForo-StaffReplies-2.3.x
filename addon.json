@@ -1,0 +1,23 @@
+{
+    "legacy_addon_id": "",
+    "title": "Staff Replies",
+    "description": "Allows staff to post replies visible only to other staff",
+    "version_id": 1000010,
+    "version_string": "1.0.0",
+    "dev": "CJ",
+    "dev_url": "https://cjdev.uk",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": {
+        "XF": [
+            2001070,
+            "XenForo 2.0.10+"
+        ],
+        "php": [
+            "7.1.0",
+            "PHP 7.1.0+"
+        ]
+    },
+    "icon": "fa-shield"
+}

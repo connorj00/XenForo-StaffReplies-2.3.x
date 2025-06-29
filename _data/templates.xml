@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="staffreplies.css" version_id="1000010" version_string="1.0.0"><![CDATA[/* Staff-Only Banner at the top of the message */
+.staffOnlyBanner {
+    padding: 5px 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: #3a2323; /* Dark background */
+    color: white;
+    border-bottom: 1px solid #833c3c; /* Optional border for separation */
+}
+
+/* Styling for the shield icon in the banner */
+.staffOnlyBanner .node-icon {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.staffOnlyBanner .node-icon i {
+    color: white;
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+/* Staff-Only Message Body Styling */
+.staffOnlyMessage {
+    background-color: #3a2323; /* Match banner */
+    color: white;
+    border: 1px solid #833c3c; /* Optional border */
+    padding: 10px;
+}
+
+.staffOnlyMessage .message-cell--user {
+	background-color: #3a2323;
+	color: white;
+    padding: 10px;
+}
+
+/* Optional Styling for Selected State */
+.staffOnlyMessage.is-selected {
+    background-color: #552828; /* Slightly darker for selection */
+    border-color: #aa4c4c; /* Highlighted border */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Glowing effect */
+}
+
+article.is-mod-selected .staffOnlyMessage, article.is-mod-selected .staffOnlyMessage .message-cell--user {
+	background-color: #261717 !important;
+}]]></template>
+</templates>

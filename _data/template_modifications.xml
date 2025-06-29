@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="post_macros" modification_key="staff_replies_post_macros" description="Add styling for staff-only posts message" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<div class="message-inner">]]></find>
+    <replace><![CDATA[
+            <xf:css src="staffreplies.css"/>
+            <xf:if is="$post.message_state == 'staffonly'">
+                <div class="staffOnlyBanner" style="padding: 5px 10px; font-weight: bold; display: flex; align-items: center;">
+                    <span class="node-icon" aria-hidden="true" style="margin-right: 5px;">
+                        <i class="fa--xf fas fa-shield">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <use href="/data/local/icons/regular.svg?v=1734111849#shield"></use>
+                            </svg>
+                        </i>
+                    </span>
+                    Staff-Only Reply
+                </div>
+                <div class="message-inner staffOnlyMessage">
+            <xf:else />
+                <div class="message-inner">
+            </xf:if>
+        ]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="staff_replies_thread_reply" description="Add staff-only checkbox to reply form" execution_order="6000" enabled="1" action="str_replace">
+    <find><![CDATA[<div class="formButtonGroup-primary">]]></find>
+    <replace><![CDATA[
+        <div class="formButtonGroup-primary">
+        <xf:if is="!$simpleSubmit && $nodeId && $xf.visitor.hasNodePermission($nodeId, 'staffReplies')">
+            <label style="cursor: pointer; font-family: Arial, sans-serif; font-size: 14px; margin-right: 10px;">
+                <input type="checkbox" name="staff_only" id="staffOnlyCheckbox" value="1" 
+                    style="
+                        width: 20px; 
+                        height: 20px; 
+                        border: 2px solid #aaa; 
+                        border-radius: 4px; 
+                        background-color: white; 
+                        cursor: pointer; 
+                        display: inline-block; 
+                        margin-right: 3px; 
+                        margin-bottom: 5px;
+                        position: relative; 
+                        transition: background-color 0.2s ease, border-color 0.2s ease; 
+                        vertical-align: middle;
+                    "
+                    onchange="this.style.backgroundColor = this.checked ? '#888' : 'white'; 
+                             this.style.borderColor = this.checked ? '#666' : '#aaa';"
+                />
+                Staff-Only
+            </label>
+        </xf:if>
+        ]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="staff_replies_thread_reply_nodeid" description="Add node id for the staff-only checkbox permission check" execution_order="6000" enabled="1" action="str_replace">
+    <find><![CDATA[arg-previewUrl=""]]></find>
+    <replace><![CDATA[
+        arg-previewUrl=""
+        arg-nodeId="{$forum.node_id}"
+        ]]></replace>
+  </modification>
+</template_modifications>

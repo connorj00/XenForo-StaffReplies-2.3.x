@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="permission.forum_staffReplies" version_id="1000010" version_string="1.0.0"><![CDATA[Staff Replies]]></phrase>
+  <phrase title="staff_only_posts_cannot_be_soft_deleted" version_id="1000010" version_string="1.0.0"><![CDATA[Staff-only posts cannot be soft-deleted. Please use permanent deletion instead or contact someone with that permission.]]></phrase>
+</phrases>
