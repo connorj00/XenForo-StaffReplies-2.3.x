@@ -23,9 +23,9 @@ The **XenForo Staff Replies Add-On** introduces the ability for staff members or
 
 To install the add-on, follow these steps:
 
-1. Open **XenForo Admin CP** → **Add-ons** → **Install/Upgrade from archive**.
-2. Select the `.zip` file for the add-on.
-3. Click **Install** and wait for the process to complete.
+1. Create the directory of `CJ/StaffReplies` within `upload/src/addons`
+2. Extract/place all files into the `StaffReplies` folder
+3. Refresh addons in the dashboard and ensure it's installed/enabled
 
 ---
 
@@ -50,34 +50,6 @@ To customize the appearance of staff reply posts:
 
 ---
 
-## Help
-
-For common problems or troubleshooting, follow these steps:
-
-- **Issue**: Permission not working as expected.  
-  **Solution**: Double-check that permissions are configured correctly in Node Permissions for the relevant user groups.
-
-If you require additional assistance, 
-
-Join the Discord server: https://discord.gg/uPGJq3MgJ8
-Or email: support@cjdev.uk
-
----
-
-## Authors
-
-- [@CJDevUK](https://cjdev.uk)
-- [@1a3Dev](https://1a3.uk)
-
----
-
-## Version History
-
-- **1.0.0**
-  - Initial release.
-
----
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md] file for details.
+XenForo Staff Replies (2.3.X) © 2025 by Connor J Davies is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
